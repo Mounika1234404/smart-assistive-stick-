@@ -144,10 +144,9 @@ Smart-Assistive-Stick/
 
 | S.No. | Student Name | Registration Number |
 |:---:|---|---|
-| 1 | [Student Name 1] | [Registration Number 1] |
-| 2 | [Student Name 2] | [Registration Number 2] |
-| 3 | [Student Name 3] | [Registration Number 3] |
-| 4 | [Student Name 4] | [Registration Number 4] |
+| 1 | [Mounika D] | [CB.SC.U4CSE24508] |
+| 2 | [R Sudhi Madhuri] | [CB.SC.U4CSE24540] |
+| 3 | [G Rajendra] | [CB.SC.U4CSE24511] |
 
 ## 12. Academic Details
 
