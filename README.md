@@ -1,53 +1,44 @@
-# smart-assistive-stick-
-A Smart Assistive Stick for visually impaired individuals featuring moisture detection, obstacle detection, Bluetooth-based companion alerts, and OLED display integration, developed using Embedded C in Keil µVision.
-
-video demo : https://youtube.com/shorts/V_h6OtgAa6U
-
 # Smart Assistive Stick for Visually Impaired People
 
-## 📌 Project Overview
+## 1. Project Overview
 
-The **Smart Assistive Stick** is an embedded systems-based assistive device designed to improve the safety and mobility of visually impaired individuals. It uses sensors, visual indicators, audio alerts, vibration feedback, and Bluetooth communication to help users identify nearby obstacles and wet surfaces and send emergency alerts to companions.
+The **Smart Assistive Stick** is an embedded systems-based assistive device designed to improve the safety, mobility, and independence of visually impaired individuals.
 
-The project is developed using **Embedded C programming in Keil µVision IDE**.
+The system uses sensors, audio alerts, visual indicators, vibration feedback, and Bluetooth communication to detect obstacles, identify wet surfaces, and send emergency alerts to a companion.
 
-## ✨ Features
+The project is implemented using **Embedded C programming in Keil µVision IDE**.
 
-### 1. Obstacle Detection
+## 2. Project Objectives
+
+- To improve the independent mobility of visually impaired individuals.
+- To detect nearby obstacles and provide immediate alerts.
+- To identify wet soil or surfaces using a moisture sensor.
+- To provide vibration-based feedback to the user.
+- To enable emergency communication through Bluetooth.
+- To display real-time system information using an OLED display.
+
+## 3. Key Features
+
+### 3.1 Obstacle Detection
 - Uses an ultrasonic sensor to detect nearby obstacles.
-- When an obstacle is detected within **70 cm**, the buzzer turns ON and the yellow LED glows.
-- When no nearby obstacle is detected, the buzzer turns OFF and the green LED glows.
+- If an obstacle is detected within **70 cm**, the buzzer turns ON and the yellow LED glows.
+- If no nearby obstacle is detected, the buzzer turns OFF and the green LED glows.
 
-### 2. Moisture Detection
-- Detects wet soil using a moisture sensor.
-- When wet soil is detected, the vibration motor turns ON to alert the user through tactile feedback.
+### 3.2 Moisture Detection
+- Uses a soil moisture sensor to detect wet soil.
+- When wet soil is detected, the vibration motor turns ON to alert the user.
 
-### 3. OLED Display
-- Displays real-time system status.
-- Shows:
-  - Obstacle detection status
-  - Soil moisture status
-  - Vibration motor status
+### 3.3 OLED Display
+Displays real-time information about:
+- Obstacle detection status.
+- Soil moisture status.
+- Vibration motor status.
 
-### 4. Emergency Alert via Bluetooth
+### 3.4 Emergency Alert Using Bluetooth
 - Uses the HC-05 Bluetooth module for wireless communication.
-- When the emergency button is pressed, an alert is sent through Bluetooth to notify a connected companion device.
+- When the emergency button is pressed, an alert is transmitted through Bluetooth to a connected companion device.
 
-## ⚙️ Working Principle
-
-The microcontroller continuously monitors the ultrasonic sensor, moisture sensor, and emergency button.
-
-Based on the sensor readings:
-
-| Condition | System Response |
-|---|---|
-| Obstacle within 70 cm | Buzzer ON + Yellow LED ON |
-| No nearby obstacle | Buzzer OFF + Green LED ON |
-| Wet soil detected | Vibration Motor ON |
-| Emergency button pressed | Alert sent via HC-05 Bluetooth |
-| System operating | OLED displays current statuses |
-
-## 🛠️ Hardware Components
+## 4. Hardware Components
 
 - Microcontroller
 - Ultrasonic Sensor
@@ -61,42 +52,83 @@ Based on the sensor readings:
 - Emergency Push Button
 - Connecting Wires
 - Power Supply
-- stm32 black pill 
 
-## 💻 Software & Technologies
+## 5. Software and Technologies
 
-- **Programming Language:** Embedded C
-- **IDE:** Keil µVision
-- **Communication:** UART / Bluetooth (HC-05) , vibration motor
-- **Display Interface:** OLED
-- **Sensor Integration:** Ultrasonic and Soil Moisture Sensors
+| Technology | Purpose |
+|---|---|
+| Embedded C | Programming |
+| Keil µVision IDE | Code development and compilation |
+| Ultrasonic Sensor | Obstacle detection |
+| Soil Moisture Sensor | Moisture detection |
+| HC-05 | Bluetooth communication |
+| OLED | Status display |
 
-## 🎯 Project Objectives
+## 6. Working Principle
 
-- To improve independent mobility for visually impaired individuals.
-- To detect obstacles and provide immediate alerts.
-- To identify wet surfaces using moisture sensing.
-- To provide vibration-based alerts for better accessibility.
-- To enable emergency communication through Bluetooth.
+The microcontroller continuously monitors the sensor readings and emergency button input.
 
-## 🌍 Applications
+Based on the detected conditions, the system activates the corresponding output devices.
 
-- Assistive technology for visually impaired people.
-- Smart mobility assistance systems.
-- Embedded systems-based safety devices.
-- Sensor-based navigation assistance.
+| Input Condition | Output Response |
+|---|---|
+| Obstacle within 70 cm | Buzzer ON, Yellow LED ON |
+| No nearby obstacle | Buzzer OFF, Green LED ON |
+| Wet soil detected | Vibration Motor ON |
+| Emergency button pressed | Alert sent through HC-05 Bluetooth |
 
-## 🚀 Future Enhancements
+The OLED display continuously provides information about obstacle, soil moisture, and vibration status.
 
-- GPS-based real-time location tracking.
-- Voice guidance and audio navigation.
-- Mobile application for emergency notifications.
-- GSM-based alerts for longer-range communication.
+## 7. Applications
+
+- Assistive technology for visually impaired individuals.
+- Smart mobility assistance.
+- Obstacle detection and safety systems.
+- Embedded systems-based accessibility solutions.
+
+## 8. Future Enhancements
+
+- GPS-based location tracking.
+- Voice-based navigation assistance.
+- Mobile application integration.
+- GSM-based emergency notifications.
 - Rechargeable battery and power optimization.
 
+## 9. Project Structure
 
-## 👩‍💻 Development
+```text
+Smart-Assistive-Stick/
+│
+├── main.c
+├── README.md
+└── Images/
+    └── project_setup.jpg
+```
 
-This project was developed as an Embedded Systems project using Keil µVision and Embedded C.
+## 10. Academic Details
+
+**Student Name(s) and Registration Number(s):**
+
+1. [Mounika Dirisala] – [CB.SC.U4CSE24508]
+2. [Sudhi Madhuri R] – [CB.SC.U4CSE24540]
+3. [G Rajendra] – [CB.SC.U4CSE24511]
+
+**Mentor:** Dr. A. Baskar
+
+**Course:** 23CSE304 – Embedded Systems
+
+**Department:** Department of Computer Science and Engineering
+
+**Institution:** School of Computing, Amrita Vishwa Vidyapeetham, Coimbatore, India.
+
+## 11. Acknowledgement
+
+We sincerely express our gratitude to our mentor, **Dr. A. Baskar**, for the valuable guidance, encouragement, and support provided throughout the development of this case study.
+
+We also acknowledge the **Department of Computer Science and Engineering, School of Computing, Amrita Vishwa Vidyapeetham, Coimbatore**, for providing the academic environment and opportunity to work on this Embedded Systems project as part of the course **23CSE304 – Embedded Systems**.
+
+This project has provided us with practical exposure to embedded C programming, sensor interfacing, microcontroller-based system design, and wireless communication.
+
+---
 
 **Smart Assistive Stick – Making Navigation Safer Through Technology.**
